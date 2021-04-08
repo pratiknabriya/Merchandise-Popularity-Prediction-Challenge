@@ -11,6 +11,8 @@ For this competition, the data is gathered from one of the top apparel brands in
 * Train.csv - 18208 rows x 12 columns (Includes popularity Column as Target variable)
 * Test.csv - 12140 rows x 11 columns
 
+Dataset can be downloaded from here: https://www.machinehack.com/hackathons/merchandise_popularity_prediction_challenge/data
+
 ### Attributes:
 
 store_ratio, basket_ratio, category_1, store_score, category_2, store_presence, score_1, score_2, score_3, score_4, time and popularity - Class of popularity (Target Column)
@@ -19,5 +21,7 @@ store_ratio, basket_ratio, category_1, store_score, category_2, store_presence, 
 ### Evaluation metric: 
 
 The submission will be evaluated using the Log Loss metric. One can use log_loss(y_true, y_pred) to calculate the same.
+
+For more details, visit: https://www.machinehack.com/hackathons/merchandise_popularity_prediction_challenge/overview
 
 ## My Solution Summary
