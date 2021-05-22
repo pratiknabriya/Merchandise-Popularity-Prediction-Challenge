@@ -36,5 +36,5 @@ For more details, visit [hackathon webpage](https://www.machinehack.com/hackatho
 6. Also for the categorical varibles, I used **probability based response encoding** (as for tree-based models, one-hot encoding doesn't give good results).
 7. For building models, first I tested with some linear models like **Logistic Regression and SVM**, then I moved towards non-linear models like **tree-based ensembles**. Finally, I settled with **XGBoost**. Upon rigorous hyperparameter tuning using validation data, XGB gave the best results.
 
-### Results
+### Result:
 Using XGBoost model (with tuned hyperparams) I managed to reduce log-loss to 0.39868.
