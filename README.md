@@ -24,4 +24,17 @@ The submission will be evaluated using the Log Loss metric. One can use log_loss
 
 For more details, visit [hackathon webpage](https://www.machinehack.com/hackathons/merchandise_popularity_prediction_challenge/overview).
 
-## My Solution Summary
+## My Approach
+
+### Key points:
+
+1. In **data pre-processing** stage it was found that there **no null values** present in train or test data. So no need of any imputation. The **duplicate values were removed** from the dataset.
+2. **Exploratory data analysis** revealed that the class labels are seriously **imbalanced with class** '4' highy dominating. The feature set is a **mix of categorical and numerical variables**. The **Heatmap** of the predictor varibles revealed **no significant correlation** among them. So we don't discard any feature from dataset.
+3. Then analyzed each of the feature one by one to find that there is a **high overlap among the class** label for each feature (univariate analysis). So, no single feature can do the classification job, but together they just might.
+4. Then comes the **data prepration stage** for modelling. Did **one-hot encoding** upon categorical features and scaled the numerical features using **mean centring and scaling** (standardization).
+5. In **Feature engineering stage**, I built several new features from the existing data - sum of scores, average of 3 scores, product of scores, store presence multiplied by store score, store presence multiplied by basket ratio, etc. like this managed to construct about **16 new features**.
+6. Also for the categorical varibles, I used **probability based response encoding** (as for tree-based models, one-hot encoding doesn't give good results).
+7. For building models, first I tested with some linear models like **Logistic Regression and SVM**, then I moved towards non-linear models like **tree-based ensembles**. Finally, I settled with **XGBoost**. Upon rigorous hyperparameter tuning using validation data, XGB gave the best results.
+
+### Results
+Using XGBoost model (with tuned hyperparams) I managed to reduce log-loss to 0.39868.
