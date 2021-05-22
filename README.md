@@ -34,7 +34,7 @@ For more details, visit [hackathon webpage](https://www.machinehack.com/hackatho
 4. Then comes the **data prepration stage** for modelling. Did **one-hot encoding** upon categorical features and scaled the numerical features using **mean centring and scaling** (standardization).
 5. In **Feature engineering stage**, I built several new features from the existing data - sum of scores, average of 3 scores, product of scores, store presence multiplied by store score, store presence multiplied by basket ratio, etc. like this managed to construct about **16 new features**.
 6. Also for the categorical varibles, I used **probability based response encoding** (as for tree-based models, one-hot encoding doesn't give good results).
-7. For building models, first I tested with some linear models like **Logistic Regression and SVM**, then I moved towards non-linear models like **tree-based ensembles**. Finally, I settled with **XGBoost**. Upon rigorous hyperparameter tuning using validation data, XGB gave the best results.
+7. For building models, first I tested with some linear models like **Logistic Regression and SVM**, then I moved towards non-linear models like **tree-based ensembles**. Finally, I settled with **XGBoost**. Upon rigorous **hyperparameter tuning** using validation data, XGB gave the best results.
 
 ### Result:
-Using XGBoost model (with tuned hyperparams) I managed to reduce log-loss to 0.39868.
+Using XGBoost model, I managed to reduce **multi-class log loss** to **0.39868** on the test data.
